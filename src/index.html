@@ -2,6 +2,33 @@
 <html lang="en">
 
 <head>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    (function(d, script) {
+        script = d.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        var osid = null;
+        var siteId = 'ezpublish'
+        if (document.cookie && document.cookie != '') {
+            var split = document.cookie.split(';');
+            for (var i = 0; i < split.length; i++) {
+                var name_and_value = split[i].split("=");
+                if(name_and_value[0] === '_osid'){
+                    var md5Hash = CryptoJS.MD5(name_value[1]);
+                    osid = md5Hash.toString();
+                }
+            }
+        }
+        script.src = "https://s.hjs.preventionbtp.fr/2/566625/clear.js?dt=5666251651525981310000&pd=acc&mo=0&ci=566625&spa=0&si=preventionbtp-test";
+        if(osid){
+            script.src += "&ck="+osid
+        }
+        d.getElementsByTagName('head')[0].appendChild(script);
+    }(document));
+</script>
+  
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
